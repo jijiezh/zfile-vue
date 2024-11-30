@@ -126,7 +126,7 @@
 <script setup>
 import BasicSetting from "~/pages/admin/download-link/basic-setting.vue";
 import {batchDeleteShortLink, deleteShortLink, getShortLinkList } from "~/api/admin-download-link";
-import zhCn from 'element-plus/lib/locale/lang/zh-cn'
+import zhCn from 'element-plus/es/locale/lang/zh-cn'
 import moment from 'moment'
 
 import { Search, Delete, Download } from "@element-plus/icons-vue";

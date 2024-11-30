@@ -2,7 +2,7 @@ import {ElLoading} from "element-plus";
 import {uploadFileReq} from "~/api/file-operator";
 import axios from "axios";
 import common from "~/common";
-import {removeDuplicateSlashes} from "fast-glob/out/managers/patterns";
+// import {removeDuplicateSlashes} from "fast-glob/out/managers/patterns";
 
 import useFileDataStore from "~/stores/file-data";
 let fileDataStore = useFileDataStore();
