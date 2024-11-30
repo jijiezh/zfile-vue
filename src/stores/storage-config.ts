@@ -70,8 +70,8 @@ const useStorageConfigStore = defineStore('storageConfigStore', {
 				pathLink: state.globalConfig.showPathLink,
 				shortLink: state.globalConfig.showShortLink,
 				showDateset:
-					state.folderConfig.enableFileOperator &&
-					(selectStatistics.value.isSingleSelect || selectStatistics.value.isMultiSelect),
+					selectStatistics.value.isSingleSelect ||
+					selectStatistics.value.isMultiSelect,
 			}
 		},
 	},
