@@ -43,15 +43,16 @@ const success = () => {
 .chooseFileTree {
 	height: 80vh;
 	position: relative;
-	padding: 30px 0;
+	padding: 50px 20px;
 }
 
 .chooseFileTree-header {
 	position: absolute;
-	top: 0;
+	top: 20px;
 	left: 0;
 	width: 100%;
 	height: 30px;
+	padding-left: 20px;
 }
 
 .chooseFileTree-tree {
@@ -61,10 +62,11 @@ const success = () => {
 
 .chooseFileTree-footer {
 	position: absolute;
-	bottom: 0;
+	bottom: 20px;
 	left: 0;
 	width: 100%;
 	height: 30px;
 	text-align: right;
+	padding-right: 20px;
 }
 </style>
