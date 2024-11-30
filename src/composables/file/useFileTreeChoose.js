@@ -143,11 +143,8 @@ export default function useFileTreeChoose() {
 			}
 		})
 		let filePathArr = selectRows.value.map((item) => {
-			let path = item.path
-			path === '/' && (path = '')
 			return {
 				...item,
-				path: `${path}/${item.name}`,
 			}
 		})
 		filePathArr.forEach((item) => {
@@ -161,7 +158,7 @@ export default function useFileTreeChoose() {
 					name: item.name,
 					storageKey: storageKey.value,
 					targetPath: p.path,
-					targetName: p.name,
+					targetName: item.name,
 				}
 				paramsArr.push(params)
 				if (type === 'FOLDER') {
@@ -173,10 +170,8 @@ export default function useFileTreeChoose() {
 
 			Promise.all(primiseArr)
 				.then((resArr) => {
-					console.log(resArr)
-					console.log(paramsArr)
-					// clearSelection()
-					// closeFileTreeDialogVisible()
+					clearSelection()
+					closeFileTreeDialogVisible()
 				})
 				.catch((err) => {
 					console.log(err)
