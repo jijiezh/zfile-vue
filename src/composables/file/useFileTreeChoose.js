@@ -9,12 +9,14 @@ import useStorageConfigStore from '~/stores/storage-config'
 import useFilePwd from '~/composables/file/useFilePwd'
 import { copyFile, copyfolder } from '~/api/file-operator'
 import useRouterData from '~/composables/useRouterData'
+import useFileDataStore from '~/stores/file-data'
 
 let { storageKey } = useRouterData()
 
 let { getPathPwd, putPathPwd } = useFilePwd()
 
 let storageConfigStore = useStorageConfigStore()
+let fileDataStore = useFileDataStore()
 
 const { selectRow, selectRows, selectStatistics, clearSelection } =
 	useFileSelect()
@@ -177,7 +179,7 @@ export default function useFileTreeChoose() {
 					console.log(err)
 				})
 				.finally(() => {
-					clearSelection()
+					!fileDataStore.imgMode && clearSelection()
 					closeFileTreeDialogVisible()
 				})
 		})
