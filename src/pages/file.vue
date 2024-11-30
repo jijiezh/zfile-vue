@@ -176,7 +176,7 @@
 			<!-- 复制到数据据 -->
 			<el-dialog
 				draggable
-				class="zfile-video-dialog"
+				class="zfile-file-tree-dialog"
 				:destroy-on-close="true"
 				:show-close="false"
 				v-model="fileTreeDialogVisible"
@@ -700,6 +700,15 @@ const showDialog = (readmeText) => {
 	// 视频弹窗样式
 	:deep(.zfile-video-dialog) {
 		@extend .zfile-dialog-wide-screen;
+
+		.el-dialog__body {
+			@apply p-0;
+			// 去除所有间距
+		}
+	}
+	// 文件树弹窗样式
+	:deep(.zfile-file-tree-dialog) {
+		width: 60%;
 
 		.el-dialog__body {
 			@apply p-0;
