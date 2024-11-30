@@ -128,3 +128,7 @@ body,
 /*	background-color: #343a40;*/
 /*}*/
 /*@import 'element-plus/theme-chalk/dark/css-vars.css';*/
+
+[customclass="chooseFileTree-password"]{
+	z-index: 99999999 !important;
+}

@@ -146,7 +146,7 @@ import {
   deleteDownloadLog,
   getDownloadLogList
 } from "~/api/admin-download-link";
-import zhCn from 'element-plus/lib/locale/lang/zh-cn'
+import zhCn from 'element-plus/es/locale/lang/zh-cn'
 
 
 import { Search, Delete } from "@element-plus/icons-vue";
